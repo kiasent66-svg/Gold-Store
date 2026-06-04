@@ -528,6 +528,13 @@
                 navigateTo('view-home', homeNavItem);
             }
         }
+<script>
+    // ده كود الربط بلوحة التحكم
+    let savedPrice = localStorage.getItem('goldPrice');
+    if (savedPrice) {
+        document.getElementById('displayPrice').innerText = savedPrice;
+    }
+</script>
     </script>
 </body>
 </html/<
