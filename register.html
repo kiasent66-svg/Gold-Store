@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>إنشاء حساب جديد</title>
+</head>
+<body>
+    <h2>إنشاء حساب</h2>
+    <input type="text" id="phone" placeholder="رقم التليفون">
+    <input type="password" id="password" placeholder="كلمة السر">
+    <button onclick="register()">إنشاء الحساب</button>
+
+    <script>
+        function register() {
+            let phone = document.getElementById('phone').value;
+            let password = document.getElementById('password').value;
+            // حفظ البيانات في المتصفح
+            localStorage.setItem('user_' + phone, password);
+            alert("تم إنشاء الحساب بنجاح!");
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+</html>
