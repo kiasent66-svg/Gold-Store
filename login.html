@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>تسجيل الدخول</title>
+</head>
+<body>
+    <h2>تسجيل الدخول</h2>
+    <input type="text" id="loginPhone" placeholder="رقم التليفون">
+    <input type="password" id="loginPass" placeholder="كلمة السر">
+    <button onclick="login()">دخول</button>
+
+    <script>
+        function login() {
+            let phone = document.getElementById('loginPhone').value;
+            let pass = document.getElementById('loginPass').value;
+            let savedPass = localStorage.getItem('user_' + phone);
+
+            if (savedPass && savedPass === pass) {
+                alert("تم الدخول بنجاح!");
+                localStorage.setItem('currentUser', phone);
+                window.location.href = "index.html";
+            } else {
+                alert("رقم التليفون أو كلمة السر خطأ!");
+            }
+        }
+    </script>
+</body>
+</html>
