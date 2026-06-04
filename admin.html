@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>لوحة التحكم</title>
+</head>
+<body>
+    <h1>تعديل السعر</h1>
+    <input type="text" id="priceInput" placeholder="ادخل السعر الجديد">
+    <button onclick="savePrice()">حفظ</button>
+    <script>
+        function savePrice() {
+            let price = document.getElementById('priceInput').value;
+            localStorage.setItem('goldPrice', price);
+            alert("تم حفظ السعر: " + price);
+        }
+    </script>
+</body>
+</html>
