@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <title>إنشاء حساب جديد</title>
-</head>
-<body>
-    <h2>إنشاء حساب</h2>
-    <input type="text" id="phone" placeholder="رقم التليفون">
-    <input type="password" id="password" placeholder="كلمة السر">
-    <button onclick="register()">إنشاء الحساب</button>
+<style>
+    /* التنسيقات العامة للمنصة */
+    * { box-sizing: border-box; }
+    body {
+        background: linear-gradient(135deg, #f5e6a3, #d4af37);
+        background-attachment: fixed;
+        color: #333;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding-top: 50px;
+    }
+    input {
+        padding: 10px;
+        margin: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
 
-    <script>
-        function register() {
-            let phone = document.getElementById('phone').value;
-            let password = document.getElementById('password').value;
-            // حفظ البيانات في المتصفح
-            localStorage.setItem('user_' + phone, password);
-            alert("تم إنشاء الحساب بنجاح!");
-            window.location.href = "login.html";
-        }
     </script>
 </body>
 </html>
